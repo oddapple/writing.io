@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1b1a1f;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.containerCircles {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70%;
+}
+
+a {
+    text-decoration-line: none;
+    color: black;
+    transition: transform .2s;
+}
+
+a:hover {
+    transform: scale(1.1);
+}
+
+p {
+    color: black;
+    text-decoration-line: none;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: #deddf4;
+    margin-bottom: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerLanguages {
+    text-align: right;
+    margin: 30px;
+}
+
+.containerLanguages a {
+    color: #deddf4;
+    text-decoration-line: none;
+    transition: transform .2s;
+}
+
+.containerLanguages a:hover {
+    transform: scale(1.1);
+}
+
+#pmb,
+#pmb2,
+#pmb3 {
+    width: 200;
+    height: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px 0 15px;
+    border-radius: 50%;
+}
+
+#pmb {
+    background-image: url(skya.png);
+    background-position: center;
+    background-size: cover;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .containerCircles {
+        flex-direction: column;
+        width: 100%;
+        /* margin-top: 200px; */
+    }
+
+    #pmb,
+    #pmb2,
+    #pmb3 {
+        display: table;
+        margin: 40px auto 40px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

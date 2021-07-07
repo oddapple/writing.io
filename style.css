@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+
+
+@font-face {
+    font-family: "Miserichordia";
+    src: url("MiserichordiaAltC.ttf");
+}
+
+body {
+    height: 100%;
+    background-color: #deddf4;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.containerWrap {
+    min-height: 100%;
+}
+
+.containerMain {
+    overflow: auto;
+    padding-bottom: 60px;
+    /* must be same height as the footer */
+}
+
+.containerFooter {
+    position: relative;
+    margin-top: -60px;
+    /* negative value of footer height */
+    clear: both;
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/* Opera Fix thanks to Maleika (Kohoutec) */
+
+body:before {
+    content: "";
+    height: 100%;
+    float: left;
+    width: 0;
+    margin-top: -32767px;
+    /* thank you Erik J - negate effect of float*/
+}
+
+
+
+.containerHeader {
+    height: 250px;
+    background-image: url(sky.png);
+    background-size: cover;
+    position: relative;
+}
+
+
+#title {
+    font-family: "Miserichordia";
+    font-size: 70px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+#containerChapters {
+    line-height: 30px;
+    background-color: #1b1a1f;
+    padding: 15px 20px 15px 20px;
+    text-align: center;
+}
+
+#containerChapters a {
+    padding-right: 10px;
+    color: white;
+    text-decoration-line: none;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+h4 {
+    font-size: 26px;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+.containerText {
+    padding: 15px 20px 15px 20px;
+    padding-bottom: 20px;
+    text-align: justify;
+    text-justify: inter-character;
+}
+
+.containerText p {
+    padding-top: 25px;
+}
+
+
+
+.containerSwitch {
+    padding: 0 20px 15px 20px;
+}
+
+.zmist {
+    color: black;
+}
+
+.zmist:hover {
+    color: white;
+    background-color: #1b1a1f;
+}
+
+.zmist.active {
+    color: white;
+}
+
+.zmist.active:hover {
+    background-color: white;
+    color: #1b1a1f;
+}
+
+.containerSwitch a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+.containerSwitch a:nth-child(2) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+}
+
+.previous,
+.next {
+    background-color: white;
+    color: #1b1a1f;
+    border-radius: 50%;
+}
+
+.next {
+    float: right;
+}
+
+.previous:hover,
+.next:hover {
+    background-color: #1b1a1f;
+    color: white;
+}
+
+.subcontainerText {
+    display: none;
+}
+
+.nightmode {
+    background-color: #2d2b34;
+    height: 100%;
+    color: white;
+    font-weight: 300;
+}
+
+.containerHeader.active {
+    background-image: url(skydark.png);
+}
+
+.previous.active,
+.next.active {
+    background-color: #1b1a1f;
+    color: white;
+}
+
+.previous.active:hover,
+.next.active:hover {
+    background-color: white;
+    color: #1b1a1f;
+}
