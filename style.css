@@ -3,11 +3,22 @@
     padding: 0;
 }
 
+
 ::-webkit-scrollbar {
-    width: 0;
-}
-
-
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: #666379;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: #323135;
+    border-radius: 10px;
+  }
 
 @font-face {
     font-family: "Miserichordia";
@@ -20,22 +31,20 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 16px;
+    cursor: default;
 }
 
 .containerWrap {
-    min-height: 100%;
+    min-height: 85%;
 }
 
 .containerMain {
     overflow: auto;
-    padding-bottom: 60px;
-    /* must be same height as the footer */
 }
 
 .containerFooter {
     position: relative;
     margin-top: -60px;
-    /* negative value of footer height */
     clear: both;
     background-color: white;
     padding-left: 20px;
@@ -45,19 +54,13 @@ body {
     justify-content: space-between;
 }
 
-
-/* Opera Fix thanks to Maleika (Kohoutec) */
-
 body:before {
     content: "";
     height: 100%;
     float: left;
     width: 0;
     margin-top: -32767px;
-    /* thank you Erik J - negate effect of float*/
 }
-
-
 
 .containerHeader {
     height: 250px;
@@ -65,7 +68,6 @@ body:before {
     background-size: cover;
     position: relative;
 }
-
 
 #title {
     font-family: "Miserichordia";
@@ -80,21 +82,8 @@ body:before {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     text-align: center;
-}
-
-#containerChapters {
-    line-height: 30px;
-    background-color: #1b1a1f;
-    padding: 15px 20px 15px 20px;
-    text-align: center;
-}
-
-#containerChapters a {
-    padding-right: 10px;
-    color: white;
-    text-decoration-line: none;
-    font-weight: 300;
-    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 h4 {
@@ -102,7 +91,6 @@ h4 {
     font-weight: 500;
     text-align: center;
 }
-
 
 .containerText {
     padding: 15px 20px 15px 20px;
@@ -115,28 +103,53 @@ h4 {
     padding-top: 25px;
 }
 
+.tabs {
+    line-height: 30px;
+    background-color: #1b1a1f;
+    padding: 15px 20px 15px 20px;
+    text-align: center;
+}
 
+.tabs ul li {
+    list-style-type: none;
+    padding-right: 10px;
+    color: #c2c1d6;
+    text-decoration-line: none;
+    font-weight: 300;
+    font-size: 15px;
+    transition: color .2s;
+    display: inline;
+}
+
+.tabs ul a {
+    padding-right: 10px;
+    color: #c2c1d6;
+}
+
+.tabs ul li:hover {
+    color: white;
+}
+
+tabs>ul>li:hover {
+    color: white;
+}
+
+.tabs>ul>li.tabActiveHeader {
+    color: white;
+}
+
+.tabpage {
+    padding: 15px 20px 15px 20px;
+    text-align: justify;
+    text-justify: inter-character;
+}
+
+.tabpage p {
+    padding-top: 25px;
+}
 
 .containerSwitch {
-    padding: 0 20px 15px 20px;
-}
-
-.zmist {
-    color: black;
-}
-
-.zmist:hover {
-    color: white;
-    background-color: #1b1a1f;
-}
-
-.zmist.active {
-    color: white;
-}
-
-.zmist.active:hover {
-    background-color: white;
-    color: #1b1a1f;
+    padding: 0px 20px 80px 20px;
 }
 
 .containerSwitch a {
@@ -154,11 +167,32 @@ h4 {
     width: 50px;
 }
 
+.zmist {
+    color: black;
+    transition: color 0.4s, background-color 0.4s;
+    text-align: center;
+}
+
+.zmist:hover {
+    color: white;
+    background-color: #1b1a1f;
+}
+
+.zmist.active {
+    color: white;
+}
+
+.zmist.active:hover {
+    background-color: white;
+    color: #1b1a1f;
+}
+
 .previous,
 .next {
     background-color: white;
     color: #1b1a1f;
     border-radius: 50%;
+    transition: color 0.4s, background-color 0.4s;
 }
 
 .next {
@@ -171,8 +205,16 @@ h4 {
     color: white;
 }
 
-.subcontainerText {
-    display: none;
+.previous.active,
+.next.active {
+    background-color: #1b1a1f;
+    color: white;
+}
+
+.previous.active:hover,
+.next.active:hover {
+    background-color: white;
+    color: #1b1a1f;
 }
 
 .nightmode {
@@ -186,14 +228,98 @@ h4 {
     background-image: url(skydark.png);
 }
 
-.previous.active,
-.next.active {
-    background-color: #1b1a1f;
-    color: white;
+body {
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
-.previous.active:hover,
-.next.active:hover {
-    background-color: white;
-    color: #1b1a1f;
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.modalDialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modalDialog div h4{
+        padding-bottom: 10px;
+}
+
+.modalDialog div p{
+    padding-bottom: 5px;
+}
+
+.modalDialog div p a{
+    text-decoration-line: none;
+}
+
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog > div {
+    width: 240px;
+    position: relative;
+    margin: 10% auto;
+    padding: 15px 20px 20px 20px;
+    background: #FFFFFF;
+}
+.close {
+    background: #514e5a;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+}
+.close:hover {
+    background: black;
+}
+
+@media screen and (min-width: 480px){
+
+    .containerSwitch {
+        padding: 0px 30px 80px 30px;
+    }
+
+    .tabpage {
+        padding: 15px 30px 15px 30px;
+    }
+
+    .tabs {
+        padding: 15px 30px 15px 30px;
+    }
+
+}
+
+@media screen and (min-width: 1280px){
+
+    #title {
+        font-size: 90px;
+    }
+
 }

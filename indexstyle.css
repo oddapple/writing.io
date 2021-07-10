@@ -3,6 +3,23 @@
     padding: 0;
 }
 
+
+.containerCircles {
+    animation: fadeInAnimation ease 1.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+  
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+
 body {
     background-color: #1b1a1f;
     font-family: 'Montserrat', sans-serif;
@@ -54,13 +71,13 @@ p {
 }
 
 .containerLanguages a {
-    color: #deddf4;
+    color: #b2b1c4;
     text-decoration-line: none;
-    transition: transform .2s;
+    transition: color .2s;
 }
 
 .containerLanguages a:hover {
-    transform: scale(1.1);
+    color: #deddf4;;
 }
 
 #pmb,
