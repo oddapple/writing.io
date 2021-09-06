@@ -5,18 +5,18 @@
 
 
 ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background-color: #666379;
+    background-color: #323135;
   }
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background-color: #323135;
+    background-color: #666379;
     border-radius: 10px;
   }
 
@@ -145,10 +145,6 @@ h4 {
     text-justify: inter-character;
 }
 
-.tabpage p {
-    padding-top: 25px;
-}
-
 .nextevent, .previous{
     padding: 9px 30px;
 }
@@ -167,25 +163,39 @@ h4 {
     left: 50px;
     height: 20%;
     bottom: 20px;
-    padding: 0 20px;
     border-radius: 25px;
     text-shadow: 1px 1px 1px black;
-    background: linear-gradient(45deg, rgba(45,43,52,1) 0%, rgba(45,43,52,1) 19%, rgba(56,53,69,0.8948530095632002) 66%, rgba(61,56,77,0.653956651019783) 100%);
 }
 
-.crtpage p:first-child {
+.crtpage h4{
     color:white;
     position: absolute;
-    border-radius: 5px;
     text-transform: uppercase;
-    top: -40px;
-    /* background-color: rgba(95,96,198,0.8416317210477942); */
+    top: -35px;
     letter-spacing: 3px;
     height: 25px;
-    width: 200px;
-    padding: 5px;
+    padding: 8px 10px 3px 12px;
     font-size: large;
     font-weight: 300;
+}
+
+.crtpage div p{
+    background: linear-gradient(45deg, rgba(45,43,52,1) 0%, rgba(45,43,52,1) 19%, rgba(56,53,69,0.8948530095632002) 66%, rgba(61,56,77,0.653956651019783) 100%);
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    text-shadow: 1px 1px 1px black;
+    padding: 8px 12px 80px 12px;
+    border-radius: 0px 10px 10px 10px;
+}
+
+.crtpage div a{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    text-shadow: 1px 1px 1px black;
+    padding: 8px 12px 0px 12px;
+    margin-top: 70px;
 }
 
 .crts {
@@ -205,7 +215,7 @@ h4 {
 }
    
 .containerSwitch {
-    padding: 0px 20px 80px 20px;
+    padding: 0px 20px 60px 20px;
 }
 
 .containerSwitch a {
@@ -244,7 +254,8 @@ h4 {
 }
 
 .previous,
-.next {
+.next,
+.nextIntro {
     background-color: white;
     color: #1b1a1f;
     border-radius: 50%;
@@ -259,24 +270,25 @@ h4 {
 }
 
 .previous:hover,
-.next:hover {
+.next:hover,
+.nextIntro:hover {
     background-color: #1b1a1f;
     color: white;
 }
 
 .previous.active,
-.next.active {
+.next.active,
+.nextIntro.active {
     background-color: #1b1a1f;
     color: white;
 }
 
 .previous.active:hover,
-.next.active:hover {
+.next.active:hover,
+.nextIntro.active:hover {
     background-color: white;
     color: #1b1a1f;
 }
-
-
 
 
 body {
@@ -355,12 +367,26 @@ body {
     visibility: hidden;
 }
 
+.littleBox{
+    display: inline-block; 
+    text-shadow: 1px 1px 1px black; 
+    background: linear-gradient(45deg, rgba(61,56,77,0.653956651019783) 100%, rgba(56,53,69,0.8948530095632002) 66%);
+    border-radius: 5px;
+    padding: 5px 15px 5px 15px;
+}
+
+.littleBox2{
+    border-radius: 8px 8px 0px 0px;
+    text-shadow: 1px 1px 1px black; 
+    background: linear-gradient(45deg, rgba(61,56,77,0.653956651019783) 100%, rgba(56,53,69,0.8948530095632002) 66%);
+    z-index: 0;
+}
 
 
 @media screen and (min-width: 480px){
 
     .containerSwitch {
-        padding: 0px 30px 80px 30px;
+        padding: 0px 30px 60px 30px;
     }
 
     /* .tabpage {
