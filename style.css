@@ -27,11 +27,12 @@
 
 body {
     height: 100%;
-    background-color: #deddf4;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
     font-size: 16px;
     cursor: default;
+    background-color: #2d2b34;
+    color: white;
+    font-weight: 300;
 }
 
 .containerWrap {
@@ -64,7 +65,7 @@ body:before {
 
 .containerHeader {
     height: 250px;
-    background-image: url(sky.png);
+    background-image: url(skydark.png);
     background-size: cover;
     position: relative;
 }
@@ -130,7 +131,7 @@ h4 {
     color: white;
 }
 
-tabs>ul>li:hover {
+.tabs>ul>li:hover {
     color: white;
 }
 
@@ -139,7 +140,7 @@ tabs>ul>li:hover {
 }
 
 .tabpage {
-    padding: 15px 20px 15px 20px;
+    /* padding: 15px 20px 15px 20px; */
     text-align: justify;
     text-justify: inter-character;
 }
@@ -148,6 +149,61 @@ tabs>ul>li:hover {
     padding-top: 25px;
 }
 
+.nextevent, .previous{
+    padding: 9px 30px;
+}
+
+.backgroundImage{
+    width: 100%;
+}
+
+.first-div, .next-div{
+    position: relative;
+}
+
+.crtpage{
+    position: absolute;
+    right: 50px;
+    left: 50px;
+    height: 20%;
+    bottom: 20px;
+    padding: 0 20px;
+    border-radius: 25px;
+    text-shadow: 1px 1px 1px black;
+    background: linear-gradient(45deg, rgba(45,43,52,1) 0%, rgba(45,43,52,1) 19%, rgba(56,53,69,0.8948530095632002) 66%, rgba(61,56,77,0.653956651019783) 100%);
+}
+
+.crtpage p:first-child {
+    color:white;
+    position: absolute;
+    border-radius: 5px;
+    text-transform: uppercase;
+    top: -40px;
+    /* background-color: rgba(95,96,198,0.8416317210477942); */
+    letter-spacing: 3px;
+    height: 25px;
+    width: 200px;
+    padding: 5px;
+    font-size: large;
+    font-weight: 300;
+}
+
+.crts {
+    position: absolute;
+    right: 50px;
+    left: 50px;
+    top: 30px;
+}
+
+.crts ul li{
+    display: inline;
+    list-style-type: none;
+    padding: 22px 30px;
+    background-color: palevioletred;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+   
 .containerSwitch {
     padding: 0px 20px 80px 20px;
 }
@@ -196,7 +252,10 @@ tabs>ul>li:hover {
 }
 
 .next {
-    float: right;
+    position: absolute;
+    padding: 22px 30px; 
+    right: 50px;
+    top: 10px;
 }
 
 .previous:hover,
@@ -217,16 +276,8 @@ tabs>ul>li:hover {
     color: #1b1a1f;
 }
 
-.nightmode {
-    background-color: #2d2b34;
-    height: 100%;
-    color: white;
-    font-weight: 300;
-}
 
-.containerHeader.active {
-    background-image: url(skydark.png);
-}
+
 
 body {
     animation: fadeInAnimation ease 0.5s;
@@ -300,15 +351,21 @@ body {
     background: black;
 }
 
+.hide{
+    visibility: hidden;
+}
+
+
+
 @media screen and (min-width: 480px){
 
     .containerSwitch {
         padding: 0px 30px 80px 30px;
     }
 
-    .tabpage {
+    /* .tabpage {
         padding: 15px 30px 15px 30px;
-    }
+    } */
 
     .tabs {
         padding: 15px 30px 15px 30px;

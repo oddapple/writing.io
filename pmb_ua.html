@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Під Місяцем Безжальним</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -28,25 +29,26 @@
                         <!-- Initial Tab -->
                         <li id="tabHeader_1" class="tabActiveHeader">Про</li> <!-- Initial Tab -->
                         <a>•</a>
-                        <li id="tabHeader_2">Діброва</li>
+                        <li id="tabHeader_2">Глава 1</li>
                         <a>•</a>
-                        <li id="tabHeader_3">Руді Вільхи</li>
+                        <li id="tabHeader_3">Глава 2</li>
                         <a>•</a>
-                        <li id="tabHeader_4">Тест 3</li>
+                        <li id="tabHeader_4">Глава 3</li>
                         <a>•</a>
-                        <li id="tabHeader_5">Тест 4</li>
+                        <li id="tabHeader_5">Глава 4</li>
                         <a>•</a>
-                        <li id="tabHeader_2">Діброва</li>
+                        <li id="tabHeader_2">Глава 5</li>
                         <a>•</a>
-                        <li id="tabHeader_3">Руді Вільхи</li>
+                        <li id="tabHeader_3">Глава 6</li>
                         <a>•</a>
-                        <li id="tabHeader_4">Тест 3</li>
+                        <li id="tabHeader_4">Глава 7</li>
                         <a>•</a>
-                        <li id="tabHeader_5">Тест 4</li>
+                        <li id="tabHeader_5">Глава 8</li>
                     </ul>
                 </div>
 
                 <div id="tabscontent" class="tabscontent">
+
                     <div class="tabpage" id="tabpage_1">
                         <h4>Про</h4>
                         <p>Про київські станції метро треба окремий блог. Це окрема цікавий комплекс архітектурних
@@ -54,13 +56,121 @@
                     </div>
                 </div>
 
+                  <!-- N A T A L Y A - 1 -->
+
                 <div class="tabpage" id="tabpage_2" style="display:none;">
-                    <h4>Глава 1</h4>
-                    <h4>Соломія</h4>
-                    <p>
-                        Ой біда біда
-                    </p>
+                    
+                    <div class="first-div">
+
+                        <a class="nextevent next round" style="bottom: 10px; top:0">&#8250;</a>
+                        
+                        <img class="backgroundImage" src="danylo.png" alt="Planets">
+
+                        <div style="position: absolute; top: 10%; left: 10%;">
+                            <h4>Н А Т А Л Я</h4>
+                            <p>blalbalbla</p>
+                        </div>
+
+                    </div>
+
+
+                     <div class="next-div" style="display:none;">
+                        
+                        <div class="crts" id="crts">
+                            <ul data-current="1">
+                                <!-- Initial Tab -->
+                                <li id="crtHeader_1" class="crtActiveHeader" style="background-image: url(orphans.png); background-size: cover;">.</li> <!-- Initial Tab -->
+                                <li id="crtHeader_2" style="background-image: url(skya.png);">.</li>
+                                <li id="crtHeader_3">.</li>
+                                <li id="crtHeader_4" onclick="
+                                setTimeout(function(){
+                                    document.getElementById('crtHeader_5').classList.remove('hide');
+                                   }, 10000);">.</li>
+                                <li id="crtHeader_5" class="hide">.</li>
+                            </ul>
+                        </div>
+
+                        <a class="nextevent next round">&#8250;</a>
+
+                        <img class="backgroundImage" src="test4.png" alt="Planets" usemap="#planetmap">
+
+                        <div class="crtpage" id="crtpage_1" style="display:none;">
+                            <div class="first-div">
+                                <p>СИРОТИ</p>
+                                <p>Hi!</p>
+                                <a class="nextevent ">&#8250;</a>
+                            </div>
+                            <div class="next-div" style="display:none;">
+                                <p>Orphans</p>
+                                <p>How are you?!</p>
+                                <a class="nextevent ">&#8250;</a>
+                            </div>
+                            <div class="next-div" style="display:none;">
+                                <p>Orphans</p>
+                                <p>Where is the boar?</p>
+                                <a class="nextevent ">&#8250;</a>
+                            </div>
+                        </div>
+                        <div class="crtpage crtBackgroundGeneral" id="crtpage_2" style="display:none;">
+                            <div>
+                                <p>Orphan 2</p>
+                                <p>What up!</p>
+                                <a class="nextevent ">&#8250;</a>
+                            </div>
+                        </div>
+                        <div class="crtpage" id="crtpage_3" style="display:none;">
+                            <div>
+                                <p>Orphan 3</p>
+                                <p>Hey!</p>
+                            </div>
+                        </div>
+                        <div class="crtpage" id="crtpage_4" style="display:none;">
+                            <div>
+                                <p>Orphan 4 </p>
+                                <p>Hey!</p>
+                            </div>
+                        </div>
+                        <div class="crtpage" id="crtpage_5" style="display:none;">5</div>
+
+                     
+    
+                     </div>
+
+                     <div class="next-div" style="display:none;">
+                     DIV 3
+                     <h4>Глава 1</h4>
+                        <h4>Соломія</h4>
+                        <h4>Глава 1</h4>
+                        <h4>Соломія</h4>
+                        <h4>Глава 1</h4>
+                        <h4>Соломія</h4>
+                        <h4>Глава 1</h4>
+                        <h4>Соломія</h4>
+                        <h4>Глава 1</h4>
+                        <h4>Соломія</h4>
+                        <h4>Глава 1</h4>
+                        <h4>Соломія</h4>
+                    
+                     </div>
+
+                     <div class="next-div" style="display:none;">
+                        DIV 4
+                        <h4>Глава 1</h4>
+                        <h4>Соломія</h4>
+                        <h4>Глава 1</h4>
+                        <h4>Соломія</h4>
+                        <h4>Глава 1</h4>
+                        <h4>Соломія</h4>
+                        <h4>Глава 1</h4>
+                        <h4>Соломія</h4>
+                        <h4>Глава 1</h4>
+                        <h4>Соломія</h4>
+                        <h4>Глава 1</h4>
+                        <h4>Соломія</h4>
+                     </div>
+
                 </div>
+
                 <div class="tabpage" id="tabpage_3" style="display:none;">
                     <h4>Глава 2</h4>
                     <h4>Мар'ян</h4>
@@ -91,9 +201,9 @@
     </div>
 
     <div class="containerSwitch" style="font-weight: 500;">
-        <a class="previous round" onclick="prevTab()">&#8249;</a>
+        <!-- <a class="previous round" onclick="prevTab()">&#8249;</a>
         <a href="#tabs" class="zmist">Зміст</a>
-        <a class="next round" onclick="nextTab()">&#8250;</a>
+        <a class="next round" onclick="nextTab()">&#8250;</a> -->
     </div>
 
     <div class="containerFooter">
@@ -135,6 +245,10 @@
             });
         });
 
+        
+
+        //  T A B S S W I T C H
+
         var tabs = document.querySelectorAll("[id^='tabHeader_']");
         var tabPages = document.getElementsByClassName("tabpage");
 
@@ -145,6 +259,7 @@
             });
         }
 
+       
         function switchTab(id) {
             id = parseInt(id);
             var activeTab = document.getElementById("tabHeader_" + id);
@@ -169,6 +284,53 @@
             }
         }
 
+        // C H A R A C T E R - B U B B L E S  S W I T C H
+
+        var crts = document.querySelectorAll("[id^='crtHeader_']");
+        var crtPages = document.getElementsByClassName("crtpage");
+
+        for (var i = 0; i < crts.length; i++) {
+            crts[i].addEventListener("click", function (e) {
+                var id = e.target.id.split("_")[1];
+                switchCrt(id);
+            });
+        }
+
+       
+        function switchCrt(id) {
+            id = parseInt(id);
+            var activeCrt = document.getElementById("crtHeader_" + id);
+            var crtPageId;
+            var i;
+
+            for (i = 0; i < crts.length; i++) {
+                crts[i].classList.remove("crtActiveHeader");
+                crts[i].parentNode.removeAttribute("data-current");
+            }
+
+            activeCrt.parentNode.setAttribute("data-current", id);
+            activeCrt.classList.add("crtActiveHeader");
+
+            for (i = 0; i < crtPages.length; i++) {
+                crtPageId = parseInt(crtPages[i].id.split("_")[1]);
+                if (crtPageId === id) {
+                    crtPages[i].style.display = "block";
+                } else {
+                    crtPages[i].style.display = "none";
+                }
+            }
+        }
+
+        // E V E N T - S W I T C H
+
+                $('.nextevent').click(function(){
+                $(this).parent().hide().next().show();//hide parent and show next
+                });
+        
+                $('.backevent').click(function(){
+                $(this).parent().hide().prev().show();//hide parent and show previous
+                });
+
         function prevTab() {
             var nextTab;
             var currentTab = document.querySelectorAll("[data-current]")[0].getAttribute("data-current");
@@ -184,6 +346,8 @@
                 switchTab(parseInt(currentTab) + 1);
             }
         }
+
+
     </script>
 
 </body>
